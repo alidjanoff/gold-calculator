@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/scss/calculator.css" />
+    <title>Gold Calculator</title>
+  </head>
+  <body>
+    <main>
+      <section class="calculator">
+        <div class="calcContainer">
+          <div class="calcRow">
+            <h2 class="calcTitle">Kredit kalkulyatoru</h2>
+            <div class="calcArea">
+              <div class="changeTabs">
+                <button
+                  class="tabBtn activeTab"
+                  id="forGold"
+                  onclick="changeTab(id)"
+                >
+                  Qızılın əyarına görə
+                </button>
+                <button class="tabBtn" id="forMoney" onclick="changeTab(id)">
+                  Məbləğə görə
+                </button>
+              </div>
+              <div class="tabArea">
+                <div class="leftSide">
+                  <div class="priceCalc">
+                    <div class="titles">
+                      <h2 class="tabTitle">Qızılın əyarları</h2>
+                    </div>
+                    <div class="golds">
+                      <label class="goldBtn" for="pricea">
+                        <input
+                          value="40"
+                          type="radio"
+                          id="pricea"
+                          name="priceBtn"
+                          onclick="selectGold2('pricea')"
+                          checked
+                        />
+                        <span>375</span>
+                      </label>
+                      <label class="goldBtn" for="priceb">
+                        <input
+                          value="64"
+                          type="radio"
+                          id="priceb"
+                          name="priceBtn"
+                          onclick="selectGold2('priceb')"
+                        />
+                        <span>583</span>
+                      </label>
+                      <label class="goldBtn" for="pricec">
+                        <input
+                          value="80"
+                          type="radio"
+                          id="pricec"
+                          name="priceBtn"
+                          onclick="selectGold2('pricec')"
+                        />
+                        <span>750</span>
+                      </label>
+                      <label class="goldBtn" for="priced">
+                        <input
+                          value="90"
+                          type="radio"
+                          id="priced"
+                          name="priceBtn"
+                          onclick="selectGold2('priced')"
+                        />
+                        <span>875</span>
+                      </label>
+                      <label class="goldBtn" for="pricee">
+                        <input
+                          value="95"
+                          type="radio"
+                          id="pricee"
+                          name="priceBtn"
+                          onclick="selectGold2('pricee')"
+                        />
+                        <span>916</span>
+                      </label>
+                      <label class="goldBtn" for="pricef">
+                        <input
+                          value="107"
+                          type="radio"
+                          id="pricef"
+                          name="priceBtn"
+                          onclick="selectGold2('pricef')"
+                        />
+                        <span>999</span>
+                      </label>
+                    </div>
+                    <div class="rangeGroup">
+                      <div class="range">
+                        <p class="rangeTitle">Məbləğ</p>
+                        <p class="rangeValue">
+                          <span class="amount">1</span> ₼
+                        </p>
+                        <label>
+                          <input
+                            class="goldRange2"
+                            step="1"
+                            type="range"
+                            min="1"
+                            max="5000"
+                            value="1"
+                            onfocus="goldRange2()"
+                          />
+                          <span class="track3"></span>
+                        </label>
+                      </div>
+                      <div class="range">
+                        <p class="rangeTitle">Kredit müddəti</p>
+                        <p class="rangeValue">
+                          <span class="month2">1</span> ay
+                        </p>
+                        <label>
+                          <input
+                            class="monthRange2"
+                            step="1"
+                            type="range"
+                            min="1"
+                            max="36"
+                            value="1"
+                            onfocus="monthRange2()"
+                          />
+                          <span class="track4"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rightSide">
+                  <div class="terms">
+                    <h2 class="rightSideTitle">Şərtlər</h2>
+                    <div class="priceBox">
+                      <p class="priceBoxTitle">Sizə ayrılan məbləğ</p>
+                      <p class="price"><span class="cash">40</span> ₼</p>
+                    </div>
+                    <div class="priceBox">
+                      <p class="priceBoxTitle">Aylıq ödəniş</p>
+                      <p class="price"><span class="percent">54.40</span> ₼</p>
+                    </div>
+                    <a href="#">Müraciət et</a>
+                  </div>
+                  <div class="terms2 deactive">
+                    <h2 class="rightSideTitle">Şərtlər</h2>
+                    <div class="priceBox">
+                      <p class="priceBoxTitle">Lazım olan qızıl miqdarı</p>
+                      <p class="price"><span class="cash2">0.03</span> qr</p>
+                    </div>
+                    <div class="priceBox">
+                      <p class="priceBoxTitle">Aylıq ödəniş</p>
+                      <p class="price"><span class="percent2">54.40</span> ₼</p>
+                    </div>
+                    <a href="#">Müraciət et</a>
+                  </div>
+                </div>
+              </div>
+              <div class="addNewTab" onclick="addTab()">
+                <div class="addIcon">
+                  <img src="./assets/images/plus.svg" alt="plus-icon" />
+                </div>
+                <p class="addTitle">Digər qızıl əlavə et</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Own Js -->
+    <script src="./assets/js/app.js"></script>
+    <!-- Own Js -->
+  </body>
+</html>

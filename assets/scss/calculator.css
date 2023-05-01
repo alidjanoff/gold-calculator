@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "DM Sans", sans-serif;
+}
+
+.calcContainer {
+  width: 79.33%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.calculator {
+  width: 100%;
+  padding: 100px 0;
+}
+.calculator .calcContainer .calcRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.calculator .calcContainer .calcRow .calcTitle {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #292d32;
+  margin-bottom: 40px;
+}
+.calculator .calcContainer .calcRow .calcArea {
+  width: 100%;
+}
+.calculator .calcContainer .calcRow .calcArea .changeTabs {
+  display: flex;
+  justify-content: flex-start;
+}
+.calculator .calcContainer .calcRow .calcArea .changeTabs .tabBtn {
+  width: 189px;
+  max-width: 189px;
+  max-height: 64px;
+  background-color: #ffffff;
+  padding: 16px 24px;
+  color: #252525;
+  font-weight: 500;
+  line-height: 32px;
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+  outline: 0;
+}
+.calculator .calcContainer .calcRow .calcArea .changeTabs .tabBtn.activeTab {
+  background-color: #f8de28;
+}
+.calculator .calcContainer .calcRow .calcArea .changeTabs .tabBtn:nth-child(1) {
+  border-top-left-radius: 16px;
+}
+.calculator .calcContainer .calcRow .calcArea .changeTabs .tabBtn:nth-child(2) {
+  border-top-right-radius: 16px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide {
+  width: 66%;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc {
+  border: 1px solid #e5e7eb;
+  border-radius: 0px 16px 16px 16px;
+  padding: 40px;
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc.active,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc.active {
+  display: flex;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc:nth-child(1) .titles .deleteBtn, .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc:nth-child(2) .titles .deleteBtn,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc:nth-child(1) .titles .deleteBtn,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc:nth-child(2) .titles .deleteBtn {
+  display: none;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .titles,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .titles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .titles .tabTitle,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .titles .tabTitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: #252525;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .titles .deleteBtn,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .titles .deleteBtn {
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(37, 37, 37, 0.25);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .titles .deleteBtn:hover,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .titles .deleteBtn:hover {
+  color: rgb(37, 37, 37);
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .golds,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .golds {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .golds .goldBtn input,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .golds .goldBtn input {
+  display: none;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .golds .goldBtn input:checked ~ span,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .golds .goldBtn input:checked ~ span {
+  background: #f8de28;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .golds .goldBtn span,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .golds .goldBtn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #292d32;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range {
+  width: 50%;
+  height: 173px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range .rangeTitle,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range .rangeTitle {
+  font-weight: 500;
+  line-height: 24px;
+  color: #252525;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range .rangeValue,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range .rangeValue {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #292d32;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label {
+  position: relative;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label span,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label span {
+  display: inline-block;
+  width: 0%;
+  height: 6px;
+  background: #f8de28;
+  position: relative;
+  top: -21px;
+  border-radius: 8px;
+  left: 0;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label input,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label input {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label input::-webkit-slider-runnable-track,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label input::-webkit-slider-runnable-track {
+  background: #e5e7eb;
+  height: 6px;
+  border-radius: 8px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label input::-moz-range-track,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label input::-moz-range-track {
+  background: #e5e7eb;
+  height: 6px;
+  border-radius: 8px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label input::-webkit-slider-thumb,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -7px;
+  background: #f7f7f7;
+  border: 1px solid #c5c5c5;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label input::-moz-range-thumb,
+.calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label input::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  margin-top: -7px;
+  background: #f7f7f7;
+  box-shadow: 0px 3px 6px rgba(156, 163, 175, 0.35), 0px 2px 2px rgba(0, 0, 0, 0.06);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide {
+  width: 33%;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms,
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms2 {
+  height: 420px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 40px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms.deactive,
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms2.deactive {
+  display: none;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms .rightSideTitle,
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms2 .rightSideTitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms .priceBox,
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms2 .priceBox {
+  height: 103px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 16px 24px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms .priceBox .priceBoxTitle,
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms2 .priceBox .priceBoxTitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #adadad;
+  margin-bottom: 4px;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms .priceBox .price,
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms2 .priceBox .price {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms a,
+.calculator .calcContainer .calcRow .calcArea .tabArea .rightSide .terms2 a {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  width: 100%;
+  height: 48px;
+  background: #f8de28;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #000000;
+}
+.calculator .calcContainer .calcRow .calcArea .addNewTab {
+  width: 66%;
+  height: 72px;
+  padding: 24px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.calculator .calcContainer .calcRow .calcArea .addNewTab.deactive {
+  display: none;
+}
+.calculator .calcContainer .calcRow .calcArea .addNewTab .addIcon {
+  width: 24px;
+  height: 24px;
+}
+.calculator .calcContainer .calcRow .calcArea .addNewTab .addIcon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.calculator .calcContainer .calcRow .calcArea .addNewTab .addTitle {
+  font-weight: 500;
+  color: #252525;
+}/*# sourceMappingURL=calculator.css.map */
