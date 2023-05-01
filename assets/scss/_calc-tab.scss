@@ -290,3 +290,102 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .calculator {
+    .calcContainer {
+      .calcRow {
+        .calcArea {
+          width: 100%;
+          .tabArea {
+            flex-direction: column;
+            .leftSide {
+              width: 100%;
+              .goldCalc,
+              .priceCalc {
+                .rangeGroup {
+                  flex-direction: column;
+                  .range {
+                    width: 100%;
+                    label {
+                      input {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .rightSide {
+              width: 100%;
+            }
+          }
+          .addNewTab {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 423px) {
+  .calculator {
+    .calcContainer {
+      width: 100%;
+      padding: 0 15px;
+      .calcRow {
+        .calcArea {
+          width: 100%;
+          .changeTabs {
+            display: flex;
+            flex-direction: column;
+            .tabBtn {
+              min-width: 100%;
+              width: 100%;
+              font-size: 12px;
+              &:nth-child(1) {
+                border-top-right-radius: 16px;
+              }
+              &:nth-child(2) {
+                border-top-right-radius: 0;
+              }
+            }
+          }
+          .tabArea {
+            flex-direction: column;
+            .leftSide {
+              width: 100%;
+              .goldCalc,
+              .priceCalc {
+                border-top-right-radius: 0;
+                .golds {
+                  .goldBtn {
+                    width: 100%;
+                  }
+                }
+                .rangeGroup {
+                  flex-direction: column;
+                  .range {
+                    width: 100%;
+                    label {
+                      input {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .rightSide {
+              width: 100%;
+            }
+          }
+          .addNewTab {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

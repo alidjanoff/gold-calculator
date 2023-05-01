@@ -327,9 +327,12 @@ function deleteTab(id) {
 }
 
 const priceData = {
-  gram: 40,
+  gold: 40,
   month: 1,
-  amount: 1,
+  cash: 1,
+  percent: 36,
+  gram: 0.03,
+  amount: 1.36,
 };
 
 // Month Slider2 (for price calc)
@@ -339,7 +342,9 @@ function monthRange2() {
   let track = document.querySelector(".track4");
   monthRange.addEventListener("input", (e) => {
     month.innerText = e.target.value;
+    priceData.month = Number(e.target.value);
     track.style.width = `${e.target.value / 0.38}%`;
+    calculate2();
   });
 }
 
@@ -350,9 +355,9 @@ function goldRange2(id) {
   let track = document.querySelector(".track3");
   goldRange.addEventListener("input", (e) => {
     amount.innerText = e.target.value;
-    priceData.amount = Number(e.target.value);
-    console.log(priceData);
+    priceData.cash = Number(e.target.value);
     track.style.width = `${e.target.value / 50.4}%`;
+    calculate2();
   });
 }
 
@@ -361,8 +366,8 @@ function selectGold2(id) {
   const radioBtn = document.querySelectorAll('input[name="priceBtn"]');
   radioBtn.forEach((item) => {
     if (item.id === id) {
-      priceData.gram = Number(item.value);
-      console.log(priceData);
+      priceData.gold = Number(item.value);
+      calculate2();
     }
   });
 }
@@ -371,4 +376,10 @@ function selectGold2(id) {
 function calculate2() {
   let totalCredit = document.querySelector(".cash2");
   let totalPercent = document.querySelector(".percent2");
+
+  priceData.gram = priceData.cash / priceData.gold;
+  priceData.amount = (priceData.cash * 0.36 + priceData.cash) / priceData.month;
+
+  totalCredit.innerText = priceData.gram.toFixed(2);
+  totalPercent.innerText = priceData.amount.toFixed(2);
 }

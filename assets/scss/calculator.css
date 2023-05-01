@@ -324,4 +324,90 @@
 .calculator .calcContainer .calcRow .calcArea .addNewTab .addTitle {
   font-weight: 500;
   color: #252525;
+}
+
+@media (max-width: 992px) {
+  .calculator .calcContainer .calcRow .calcArea {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea {
+    flex-direction: column;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup,
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup {
+    flex-direction: column;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range,
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label input,
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label input {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .rightSide {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .addNewTab {
+    width: 100%;
+  }
+}
+@media (max-width: 423px) {
+  .calculator .calcContainer {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .calculator .calcContainer .calcRow .calcArea {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .changeTabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .calculator .calcContainer .calcRow .calcArea .changeTabs .tabBtn {
+    min-width: 100%;
+    width: 100%;
+    font-size: 12px;
+  }
+  .calculator .calcContainer .calcRow .calcArea .changeTabs .tabBtn:nth-child(1) {
+    border-top-right-radius: 16px;
+  }
+  .calculator .calcContainer .calcRow .calcArea .changeTabs .tabBtn:nth-child(2) {
+    border-top-right-radius: 0;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea {
+    flex-direction: column;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc,
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc {
+    border-top-right-radius: 0;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .golds .goldBtn,
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .golds .goldBtn {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup,
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup {
+    flex-direction: column;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range,
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .goldCalc .rangeGroup .range label input,
+  .calculator .calcContainer .calcRow .calcArea .tabArea .leftSide .priceCalc .rangeGroup .range label input {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .tabArea .rightSide {
+    width: 100%;
+  }
+  .calculator .calcContainer .calcRow .calcArea .addNewTab {
+    width: 100%;
+  }
 }/*# sourceMappingURL=calculator.css.map */
