@@ -1,14 +1,19 @@
 <h1>Gold Credit Calculator</h1>
 
-<p>Bu hesap makinesi, HTML, SCSS ve JS kullanılarak oluşturulmuştur ve altın taksitlerini hesaplamak için tasarlanmıştır.</p>
+<p>This calculator is designed to calculate gold installments and created using HTML, SCSS, and JS.</p>
 
-<p>Bu proje açık kaynaklıdır ve herkesin kullanımına açıktır. Kod üzerinde herhangi bir değişiklik yapmanız durumunda, bu değişikliklerin sorumluluğu tamamen sizin olacaktır.</p>
+<p>This project is open-source and available to everyone. If you make any changes to the code, you will be solely responsible for those changes.</p>
 
-<h3>Nasıl kullanılır?</h3>
-<p>Bu hesap makinesini kullanmak için, web tarayıcınızda index.html dosyasını açmanız yeterlidir. Daha sonra, gerekli bilgileri girerek altın taksitlerini hesaplayabilirsiniz.</p>
+<h3>How to use?</h3>
 
-<h3>Katkıda Bulunma</h3>
-<p>Eğer bu projeye katkıda bulunmak isterseniz, lütfen bir "pull request" gönderin ve değişikliklerinizi açıklayan bir açıklama ekleyin. Kabul edildiği takdirde, değişiklikleriniz ana projeye dahil edilecektir.</p>
+<p>To use this calculator, simply open the index.html file in your web browser. Then, enter the necessary information to calculate gold installments.</p>
 
-<h3>Lisans</h3>
-<p>Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasını inceleyebilirsiniz.</p>
+<h3>Contributing</h3>
+
+<p>If you would like to contribute to this project, please submit a pull request and include a description of your changes. If your changes are accepted, they will be included in the main project.</p>
+
+<h3>License</h3>
+
+<p>This project is licensed under the MIT License. For more information, please see the LICENSE file.</p>
+
+<h4>Thank you for using Gold Credit Calculator!</h4>
